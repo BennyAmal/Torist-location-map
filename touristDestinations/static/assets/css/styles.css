@@ -1,0 +1,125 @@
+/* styles.css */
+
+.formTitle{
+    text-align: center;
+    font-weight: bold;
+}
+
+.my-form {
+    max-width:1500px;
+    margin: 0 auto;
+}
+
+.my-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.my-form label {
+    font-weight: bold;
+    flex: 1; /* Take up remaining space */
+}
+
+.my-form input[type="text"],
+.my-form input[type="url"],
+.my-form select,
+.my-form textarea {
+    flex: 2; /* Take up more space */
+    margin-left: 10px; /* Add space between label and input */
+}
+
+.my-form button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* for read page */
+
+.card_container {
+    height: 300px;
+    position: relative;
+    overflow: hidden; /* Hide overflow to ensure proper button placement */
+}
+
+.portfolio-item {
+    position: relative;
+}
+
+.image_container {
+    /* Set fixed height for the image container */
+    height: 100px; /* Adjust the height as desired */
+    overflow: hidden; /* Hide overflow to ensure uniformity */
+}
+
+.image_container img {
+    /* Ensure the image covers the container and maintains aspect ratio */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.portfolio-item img {
+    transition: transform 0.5s ease; /* Add ease transition for hover animation */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.description-box {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 1; /* Ensure the description box appears above other elements */
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    text-align: center;
+    color: #030303;
+}
+
+.portfolio-item:hover .description-box {
+    display: block;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0; /* Align buttons at the bottom */
+    left: 0;
+    width: 100%;
+    display: flex; /* Ensure buttons are aligned horizontally */
+    justify-content: center; /* Center-align buttons horizontally */
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: transparent; /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply blur effect to background */
+    transition: opacity 0.3s ease; /* Add transition effect */
+    opacity: 0; /* Initially hide the buttons */
+}
+
+.button-container button {
+    margin: 5px;
+}
+
+.button-container .update-button{
+    background-color: rgb(108, 108, 201);
+    color: aliceblue;
+}
+
+.button-container .delete-button{
+    background-color: rgb(184, 79, 79);
+    color: aliceblue;
+}
+
+/* Show buttons on hover */
+.card_container:hover .button-container {
+    opacity: 1;
+}
+
+
+.search-form {
+    float: left;
+    margin-bottom: 30px;
+}
